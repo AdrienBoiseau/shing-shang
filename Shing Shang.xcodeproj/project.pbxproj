@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BB4DAD11BF90315003385C3 /* pion.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4DACF1BF90315003385C3 /* pion.c */; };
+		6BB4DAD41BF90862003385C3 /* case.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4DAD21BF90861003385C3 /* case.c */; };
+		6BB4DADA1BF90F24003385C3 /* damier.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4DAD81BF90F24003385C3 /* damier.c */; };
+		6BB4DADD1BF920E6003385C3 /* joueur.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4DADC1BF920E6003385C3 /* joueur.c */; };
 		7A4C41811BF8FF0700A1E528 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C41801BF8FF0700A1E528 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6BB4DACF1BF90315003385C3 /* pion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pion.c; sourceTree = "<group>"; };
+		6BB4DAD21BF90861003385C3 /* case.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = case.c; sourceTree = "<group>"; };
+		6BB4DAD51BF9088A003385C3 /* model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
+		6BB4DAD81BF90F24003385C3 /* damier.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = damier.c; sourceTree = "<group>"; };
+		6BB4DADB1BF91AEA003385C3 /* view.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = view.h; sourceTree = "<group>"; };
+		6BB4DADC1BF920E6003385C3 /* joueur.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = joueur.c; sourceTree = "<group>"; };
 		7A4C417D1BF8FF0700A1E528 /* Shing Shang */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Shing Shang"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4C41801BF8FF0700A1E528 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +48,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BB4DAD61BF90994003385C3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6BB4DACF1BF90315003385C3 /* pion.c */,
+				6BB4DAD21BF90861003385C3 /* case.c */,
+				6BB4DAD51BF9088A003385C3 /* model.h */,
+				6BB4DADC1BF920E6003385C3 /* joueur.c */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		6BB4DAD71BF90F0E003385C3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6BB4DAD81BF90F24003385C3 /* damier.c */,
+				6BB4DADB1BF91AEA003385C3 /* view.h */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		7A4C41741BF8FF0700A1E528 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +87,8 @@
 		7A4C417F1BF8FF0700A1E528 /* Shing Shang */ = {
 			isa = PBXGroup;
 			children = (
+				6BB4DAD71BF90F0E003385C3 /* view */,
+				6BB4DAD61BF90994003385C3 /* model */,
 				7A4C41801BF8FF0700A1E528 /* main.c */,
 			);
 			path = "Shing Shang";
@@ -119,6 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4C41811BF8FF0700A1E528 /* main.c in Sources */,
+				6BB4DAD11BF90315003385C3 /* pion.c in Sources */,
+				6BB4DAD41BF90862003385C3 /* case.c in Sources */,
+				6BB4DADA1BF90F24003385C3 /* damier.c in Sources */,
+				6BB4DADD1BF920E6003385C3 /* joueur.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +273,7 @@
 				7A4C41861BF8FF0700A1E528 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
