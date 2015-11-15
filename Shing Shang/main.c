@@ -7,11 +7,11 @@
 //
 
 #include <stdio.h>
-#include "model.h"
-#include "view.h"
+#include "model/model.h"
+#include "view/view.h"
 
 int main(void) {
-    
+
     initialiser();
     afficherDamier();
     

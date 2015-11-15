@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-#include "model.h"
+#include "../model/model.h"
 #include "view.h"
 
 Case damier[NBLIGNE][NBCOLONE];
@@ -35,7 +35,7 @@ void initialiser() {
                     jouable = 0;
                 }
             }
-            
+
             // creer une case vide dans le damier
             damier[i][j] = creerCase(i, j, jouable);
         }

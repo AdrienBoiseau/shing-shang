@@ -58,3 +58,10 @@ xcuserdata
 *.xcuserstate
 *.xcscheme
 *.xcodeproj/*
+.idea/*
+
+CMakeLists.txt
+
+.idea/vcs.xml
+
+.idea/dictionaries/Paul1.xml
