@@ -48,5 +48,6 @@ typedef struct
 Case creerCase(int x, int y, int jouable);
 Pion creerPion(Coordonnees coordonnes, Type type, Joueur joueur);
 Joueur creerJoueur(char nom[255], Couleur couleur);
+Coordonnees creerCoordonnees(int x, int y);
 
 #endif /* model_h */

@@ -8,6 +8,14 @@
 
 #include "model.h"
 
+Coordonnees creerCoordonnees(int x, int y) {
+    Coordonnees coordoonees;
+    coordoonees.x = x;
+    coordoonees.y = y;
+    
+    return coordoonees;
+}
+
 Pion creerPion(Coordonnees coordonnees, Type type, Joueur joueur) {
     Pion nouveauPion;
     nouveauPion.cordonnees = coordonnees;
