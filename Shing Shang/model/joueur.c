@@ -13,6 +13,6 @@ Joueur creerJoueur(char nom[255], Couleur couleur) {
     Joueur player;
     player.nom = nom;
     player.couleur = couleur;
-    
+
     return player;
 }

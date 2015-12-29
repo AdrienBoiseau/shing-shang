@@ -35,7 +35,7 @@ void initialiser() {
                     jouable = 0;
                 }
             }
-
+            
             // creer une case vide dans le damier
             damier[i][j] = creerCase(i, j, jouable);
         }
