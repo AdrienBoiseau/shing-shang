@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include "model.h"
 
-Joueur creerJoueur(char nom[255], Couleur couleur) {
+Joueur creerJoueur(char nom[], Couleur couleur) {
     Joueur player;
     player.nom = nom;
     player.couleur = couleur;

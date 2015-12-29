@@ -7,11 +7,14 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 
 #include "../model/model.h"
 #include "view.h"
 
 Case damier[NBLIGNE][NBCOLONE];
+Joueur joueur1;
+Joueur joueur2;
 
 void afficherDamier() {
     for (int i = 0; i < NBLIGNE; i++) {
@@ -40,8 +43,49 @@ void afficherDamier() {
         printf("\n");
     }
 }
+void initialiserPion() {
+             Coordonnees coordonnes;
+    for(int i = 0; i < NBLIGNE; i++) {
+        for(int j = 0; j < NBCOLONE; j++) {
+         
+            if ((i==3 && j==3) || (i==10 && j==3)) {
+       
+                coordonnes.x = i;
+                coordonnes.y = j;
+            
+                damier[i][j].pion = creerPion(coordonnes, DRAGON, joueur1);
+            }
+            if ((i==3 && j==10) || (i==10 && j==10)) {
+             
+                coordonnes.x = i;
+                coordonnes.y =j;
+                damier[i][j].pion = creerPion(coordonnes, DRAGON, joueur2);
+            }
+            if ( ((i==4 && j==3) && (i==3 && j==4)) || ((i==9 && j==3) && (i==10 && j==4)) ) {
+      
+                coordonnes.x = i;
+                coordonnes.y = j;
+                damier[i][j].pion = creerPion(coordonnes, LION, joueur1);
+            }
+            if ( ((i==3 && j==9) && (i==4 && j==10)) || ((i==10 && j==9) && (i==9 && j==10)) ) {
+                coordonnes.x = i;
+                coordonnes.y = j;
+                damier[i][j].pion = creerPion(coordonnes, LION, joueur2);
+            }
+            
+        
+        
+        }
+    }
+        
+}
+
+
 
 void initialiser() {
+    joueur1 = creerJoueur("joueur1", ROUGE);
+    joueur2 = creerJoueur("joueur2", NOIR);
+    
     for(int i = 0; i < NBLIGNE; i++) {
         for(int j = 0; j < NBCOLONE; j++) {
             
