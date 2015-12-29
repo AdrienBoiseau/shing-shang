@@ -16,8 +16,27 @@ Case damier[NBLIGNE][NBCOLONE];
 void afficherDamier() {
     for (int i = 0; i < NBLIGNE; i++) {
         for (int j = 0; j < NBCOLONE; j++) {
-            printf("%i", damier[i][j].jouable);
+            
+            switch (damier[i][j].pion.type) {
+                case DRAGON:
+                    printf("D");
+                    break;
+                case SINGE:
+                    printf("S");
+                    break;
+                case LION:
+                    printf("L");
+                    break;
+                case PORTAIL:
+                    printf("P");
+                    break;
+                default:
+                    printf("%i", damier[i][j].jouable);
+                    break;
+            }
+            
         }
+        
         printf("\n");
     }
 }

@@ -11,7 +11,7 @@
 
 typedef enum
 {
-    DRAGON = 3 , LION = 2 , SINGE = 1
+    DRAGON = 3 , LION = 2 , SINGE = 1, PORTAIL = 0
 } Type;
 
 typedef enum
