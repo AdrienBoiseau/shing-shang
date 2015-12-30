@@ -25,13 +25,13 @@ void jouerCoup() {
     TypeCase caseDepart = verifierCase(from.x, from.y);
     
     /*if(t == PION) {
-        //deplacerPion(creerCoordonnees(<#int x#>, <#int y#>), <#Coordonnees arrive#>)
-    } */
+     //deplacerPion(creerCoordonnees(<#int x#>, <#int y#>), <#Coordonnees arrive#>)
+     } */
     
     
     // recuperer coordonnées deplacement
-     
-     printf("Où voulez-vous aller? (exemple 9,2)\n");
+    
+    printf("Où voulez-vous aller? (exemple 9,2)\n");
     Coordonnees to = recupererCoordonnees();
     
     TypeCase caseFin = verifierCase(to.x, to.y);
@@ -52,43 +52,43 @@ void run() {
 }
 
 /*
-
-int choixjoueur (int joueur)
-{
-        jouerCoup();
-    
-    joueur = 0;
-    do {
-        printf("Quel joueur commence à jouer ? (Tapez 1 pour joueur 1, 2 pour joueur 2, 3 pour aléatoire)\n");
-        scanf("%d",&joueur); //Choix du joueur qui commence
-        viderBuffer();
-    }
-    while (joueur!=1 && joueur!=2 && joueur!=3);//Répète le Do tant que la valeur rentrer n'est pas bonne
-    
-    //Regarde quel joueur commence
-    if (joueur==1) {
-        printf("Le joueur 1 commence\n"); // Regarde quel joueur commence
-        return 1;
-    }
-    
-    if (joueur==2) {
-        printf("Le joueur 2 commence\n"); //Regarde quel joueur commence
-        return 2;
-    }
-    
-    if (joueur==3) {
-        srand(time(NULL));
-        joueur = 1 + rand()%( 2 - 1 + 1); //Fait un rand entre 1 et 2
-        if (joueur==1) {
-            printf("Le joueur 1 commence\n");//En fonction du rand regarde quel joueur commence
-            return 1;
-        }
-        if (joueur==2) {
-            printf("Le joueur 2 commence\n");//En fonction du rand regarde quel joueur commence
-            return 2;
-        }
-    }
-    
-    return 0;
-}
-*/
+ 
+ int choixjoueur (int joueur)
+ {
+ jouerCoup();
+ 
+ joueur = 0;
+ do {
+ printf("Quel joueur commence à jouer ? (Tapez 1 pour joueur 1, 2 pour joueur 2, 3 pour aléatoire)\n");
+ scanf("%d",&joueur); //Choix du joueur qui commence
+ viderBuffer();
+ }
+ while (joueur!=1 && joueur!=2 && joueur!=3);//Répète le Do tant que la valeur rentrer n'est pas bonne
+ 
+ //Regarde quel joueur commence
+ if (joueur==1) {
+ printf("Le joueur 1 commence\n"); // Regarde quel joueur commence
+ return 1;
+ }
+ 
+ if (joueur==2) {
+ printf("Le joueur 2 commence\n"); //Regarde quel joueur commence
+ return 2;
+ }
+ 
+ if (joueur==3) {
+ srand(time(NULL));
+ joueur = 1 + rand()%( 2 - 1 + 1); //Fait un rand entre 1 et 2
+ if (joueur==1) {
+ printf("Le joueur 1 commence\n");//En fonction du rand regarde quel joueur commence
+ return 1;
+ }
+ if (joueur==2) {
+ printf("Le joueur 2 commence\n");//En fonction du rand regarde quel joueur commence
+ return 2;
+ }
+ }
+ 
+ return 0;
+ }
+ */
