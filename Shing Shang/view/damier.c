@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <string.h>
-
 #include "../model/model.h"
 #include "view.h"
 
@@ -31,7 +30,7 @@ void afficherDamier() {
                     printf("L");
                     break;
                 case PORTAIL:
-                    printf("P");
+                    printf("*");
                     break;
                 default:
                     printf("%i", damier[i][j].jouable);
@@ -88,8 +87,6 @@ void initialiserPion() {
     damier[8][6].pion = creerPion(creerCoordonnees(8,6), PORTAIL, joueur2);
 }
 
-
-
 void initialiser() {
     joueur1 = creerJoueur("joueur1", ROUGE);
     joueur2 = creerJoueur("joueur2", NOIR);
@@ -115,3 +112,17 @@ void initialiser() {
     initialiserPion();
 }
 
+TypeCase verifierCase(int x, int y) {
+    
+    Case cellule = damier[x][y];
+    
+    if (!cellule.jouable) {
+        return OUT;
+    }
+    
+    return VIDE;
+}
+
+void deplacerPion(Coordonnees depart, Coordonnees arrive) {
+    
+}

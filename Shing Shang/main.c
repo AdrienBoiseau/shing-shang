@@ -15,6 +15,10 @@ int main(void) {
 
     initialiser();
     afficherDamier();
+  
+    jouerCoup();
+    
+    //choixjoueur(joueur);
     
     return 0;
 }

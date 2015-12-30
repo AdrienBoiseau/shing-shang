@@ -14,5 +14,10 @@
 
 void initialiser();
 void afficherDamier();
+int choixjoueur(int joueur);
+
+TypeCase verifierCase(int x, int y);
+void deplacerPion(Coordonnees depart, Coordonnees arrive);
+void jouerCoup();
 
 #endif /* view_h */

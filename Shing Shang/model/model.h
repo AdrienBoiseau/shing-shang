@@ -19,6 +19,10 @@ typedef enum
     ROUGE, NOIR
 } Couleur;
 
+typedef enum {
+    VIDE, PION, OUT
+} TypeCase;
+
 typedef struct
 {
     char *nom;
