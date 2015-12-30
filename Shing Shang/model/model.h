@@ -45,11 +45,14 @@ typedef struct
 typedef struct
 {
     int jouable;
+    int pleine;
     Coordonnees coordonnees;
     Pion pion;
 } Case;
 
-Case creerCase(int x, int y, int jouable);
+Case creerCase(int x, int y, int jouable, int pleine);
+void remplirCase(Case cellule);
+
 Pion creerPion(Coordonnees coordonnes, Type type, Joueur joueur);
 Joueur creerJoueur(char nom[255], Couleur couleur);
 Coordonnees creerCoordonnees(int x, int y);

@@ -24,13 +24,6 @@ void jouerCoup() {
     
     TypeCase caseDepart = verifierCase(from.x, from.y);
     
-    /*if(t == PION) {
-     //deplacerPion(creerCoordonnees(<#int x#>, <#int y#>), <#Coordonnees arrive#>)
-     } */
-    
-    
-    // recuperer coordonnées deplacement
-    
     printf("Où voulez-vous aller? (exemple 9,2)\n");
     Coordonnees to = recupererCoordonnees();
     
