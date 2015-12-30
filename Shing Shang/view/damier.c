@@ -36,7 +36,11 @@ void afficherDamier() {
                     printf("*");
                     break;
                 default:
-                    printf("%i", damier[i][j].jouable);
+                    if(damier[i][j].jouable) {
+                        printf("0");
+                    } else {
+                        printf(" ");
+                    }
                     break;
             }
             
@@ -51,71 +55,71 @@ void initialiserPion() {
     
     //DRAGON
     damier[2][2].pion = creerPion(creerCoordonnees(2,2), DRAGON, joueur1);
-     remplirCase(damier[2][2]);
+    remplirCase(damier[2][2]);
     damier[9][2].pion = creerPion(creerCoordonnees(9,2), DRAGON, joueur1);
-     remplirCase(damier[9][2]);
+    remplirCase(damier[9][2]);
     //LION
     damier[3][2].pion = creerPion(creerCoordonnees(3,2), LION, joueur1);
-     remplirCase(damier[3][2]);
+    remplirCase(damier[3][2]);
     damier[2][3].pion = creerPion(creerCoordonnees(2,3), LION, joueur1);
-     remplirCase(damier[2][3]);
+    remplirCase(damier[2][3]);
     damier[8][2].pion = creerPion(creerCoordonnees(8,2), LION, joueur1);
-     remplirCase(damier[8][2]);
+    remplirCase(damier[8][2]);
     damier[9][3].pion = creerPion(creerCoordonnees(9,3), LION, joueur1);
-     remplirCase(damier[9][3]);
+    remplirCase(damier[9][3]);
     //SINGE
     damier[4][2].pion = creerPion(creerCoordonnees(4,2), SINGE, joueur1);
-     remplirCase(damier[4][2]);
+    remplirCase(damier[4][2]);
     damier[3][3].pion = creerPion(creerCoordonnees(3,3), SINGE, joueur1);
-     remplirCase(damier[3][3]);
+    remplirCase(damier[3][3]);
     damier[2][4].pion = creerPion(creerCoordonnees(2,4), SINGE, joueur1);
-     remplirCase(damier[2][4]);
+    remplirCase(damier[2][4]);
     damier[7][2].pion = creerPion(creerCoordonnees(7,2), SINGE, joueur1);
-     remplirCase(damier[7][2]);
+    remplirCase(damier[7][2]);
     damier[8][3].pion = creerPion(creerCoordonnees(8,3), SINGE, joueur1);
-     remplirCase(damier[8][3]);
+    remplirCase(damier[8][3]);
     damier[9][4].pion = creerPion(creerCoordonnees(9,4), SINGE, joueur1);
-     remplirCase(damier[9][4]);
+    remplirCase(damier[9][4]);
     //PORTAILS
     damier[3][5].pion = creerPion(creerCoordonnees(3,5), PORTAIL, joueur1);
-     remplirCase(damier[3][5]);
+    remplirCase(damier[3][5]);
     damier[3][6].pion = creerPion(creerCoordonnees(3,6), PORTAIL, joueur1);
-     remplirCase(damier[3][6]);
+    remplirCase(damier[3][6]);
     
     //JOUEUR 2
     
     //DRAGON
     damier[2][9].pion = creerPion(creerCoordonnees(2,9), DRAGON, joueur2);
-     remplirCase(damier[2][9]);
+    remplirCase(damier[2][9]);
     damier[9][9].pion = creerPion(creerCoordonnees(9,9), DRAGON, joueur2);
-     remplirCase(damier[9][9]);
+    remplirCase(damier[9][9]);
     //LION
     damier[2][8].pion = creerPion(creerCoordonnees(2,8), LION, joueur2);
-     remplirCase(damier[2][8]);
+    remplirCase(damier[2][8]);
     damier[3][9].pion = creerPion(creerCoordonnees(3,9), LION, joueur2);
-     remplirCase(damier[3][9]);
+    remplirCase(damier[3][9]);
     damier[9][8].pion = creerPion(creerCoordonnees(9,8), LION, joueur2);
-     remplirCase(damier[9][8]);
+    remplirCase(damier[9][8]);
     damier[8][9].pion = creerPion(creerCoordonnees(8,9), LION, joueur2);
-     remplirCase(damier[8][9]);
+    remplirCase(damier[8][9]);
     //SINGE
     damier[2][7].pion = creerPion(creerCoordonnees(2,7), SINGE, joueur2);
-     remplirCase(damier[2][7]);
+    remplirCase(damier[2][7]);
     damier[3][8].pion = creerPion(creerCoordonnees(3,8), SINGE, joueur2);
-     remplirCase(damier[3][8]);
+    remplirCase(damier[3][8]);
     damier[4][9].pion = creerPion(creerCoordonnees(4,9), SINGE, joueur2);
-     remplirCase(damier[4][9]);
+    remplirCase(damier[4][9]);
     damier[9][7].pion = creerPion(creerCoordonnees(9,7), SINGE, joueur2);
-     remplirCase(damier[9][7]);
+    remplirCase(damier[9][7]);
     damier[8][8].pion = creerPion(creerCoordonnees(8,8), SINGE, joueur2);
-     remplirCase(damier[8][8]);
+    remplirCase(damier[8][8]);
     damier[7][9].pion = creerPion(creerCoordonnees(7,9), SINGE, joueur2);
-     remplirCase(damier[7][9]);
+    remplirCase(damier[7][9]);
     //PORTAILS
     damier[8][5].pion = creerPion(creerCoordonnees(8,5), PORTAIL, joueur2);
-     remplirCase(damier[8][5]);
+    remplirCase(damier[8][5]);
     damier[8][6].pion = creerPion(creerCoordonnees(8,6), PORTAIL, joueur2);
-     remplirCase(damier[8][6]);
+    remplirCase(damier[8][6]);
 }
 
 void initialiser() {
