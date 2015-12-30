@@ -8,14 +8,17 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "../model/model.h"
+
+#include "model.h"
 #include "view.h"
+#include "app.h"
 
 Case damier[NBLIGNE][NBCOLONE];
 Joueur joueur1;
 Joueur joueur2;
 
 void afficherDamier() {
+    
     for (int i = 0; i < NBLIGNE; i++) {
         for (int j = 0; j < NBCOLONE; j++) {
             
@@ -48,7 +51,10 @@ void initialiserPion() {
     
     //DRAGON
     damier[2][2].pion = creerPion(creerCoordonnees(2,2), DRAGON, joueur1);
+    remplirCase(damier[2][2]);
     damier[9][2].pion = creerPion(creerCoordonnees(9,2), DRAGON, joueur1);
+    remplirCase(damier[9][2]);
+    
     //LION
     damier[3][2].pion = creerPion(creerCoordonnees(3,2), LION, joueur1);
     damier[2][3].pion = creerPion(creerCoordonnees(2,3), LION, joueur1);
@@ -105,7 +111,7 @@ void initialiser() {
             }
             
             // creer une case vide dans le damier
-            damier[i][j] = creerCase(i, j, jouable);
+            damier[i][j] = creerCase(i, j, jouable, 0);
         }
     }
     
@@ -118,6 +124,10 @@ TypeCase verifierCase(int x, int y) {
     
     if (!cellule.jouable) {
         return OUT;
+    }
+    
+    if (cellule.pleine) {
+        return PION;
     }
     
     return VIDE;
