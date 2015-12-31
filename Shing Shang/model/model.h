@@ -20,7 +20,7 @@ typedef enum
 } Couleur;
 
 typedef enum {
-    VIDE, PION, OUT
+    VIDE, PION, OUT, OBJET
 } TypeCase;
 
 typedef struct
@@ -51,7 +51,7 @@ typedef struct
 } Case;
 
 Case creerCase(int x, int y, int jouable, int pleine);
-void remplirCase(Case cellule);
+void remplirCase(Case *cellule);
 
 Pion creerPion(Coordonnees coordonnes, Type type, Joueur joueur);
 Joueur creerJoueur(char nom[255], Couleur couleur);

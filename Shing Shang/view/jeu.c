@@ -19,18 +19,23 @@
 void jouerCoup() {
     
     // recuperer coordonnées pion
-    printf("Quel Pion voulez-vous jouer ? (exemple 9,2)\n");
-    Coordonnees from = recupererCoordonnees();
+    while(1) {
+        printf("Quel Pion voulez-vous jouer ? (exemple 9,2)\n");
+        Coordonnees from = recupererCoordonnees();
+        
+        TypeCase caseDepart = verifierCase(from.x, from.y);
+        if (caseDepart == PION)
+            break;
+    }
     
-    TypeCase caseDepart = verifierCase(from.x, from.y);
-    
-    printf("Où voulez-vous aller? (exemple 9,2)\n");
-    Coordonnees to = recupererCoordonnees();
-    
-    TypeCase caseFin = verifierCase(to.x, to.y);
-    
-    //verifierCase(i, j);
-    
+    while(1) {
+        printf("Où voulez-vous aller? (exemple 9,2)\n");
+        Coordonnees to = recupererCoordonnees();
+        
+        TypeCase caseFin = verifierCase(to.x, to.y);
+        if (caseFin == PION || caseFin == VIDE)
+            break;
+    }
 }
 
 void run() {

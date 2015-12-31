@@ -19,6 +19,6 @@ Case creerCase(int x, int y, int jouable, int pleine)
     return nouvelleCase;
 }
 
-void remplirCase(Case cellule) {
-    cellule.pleine = 1;
+void remplirCase(Case *cellule) {
+    cellule->pleine = 1;
 }
