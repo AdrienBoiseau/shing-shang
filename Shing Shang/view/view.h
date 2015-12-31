@@ -14,10 +14,14 @@
 
 void initialiser();
 void afficherDamier();
-int choixjoueur(int joueur);
+Joueur* choixJoueur();
 
 TypeCase verifierCase(int x, int y);
+Case* recupererCellule(Coordonnees coordonnees);
+Joueur* recupererJoueur(Couleur couleur);
+
 void deplacerPion(Coordonnees depart, Coordonnees arrive);
 void jouerCoup();
+void run();
 
 #endif /* view_h */

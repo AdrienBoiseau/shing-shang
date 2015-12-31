@@ -60,5 +60,12 @@ void afficherErreurDeplacement(TypeCase type) {
         default:
             break;
     }
-    
+}
+
+void afficherTourJoueur(Joueur *joueur) {
+    if(joueur->couleur == NOIR) {
+        printf("Joueur 1 à vous de jouer\n");
+    } else if(joueur->couleur == ROUGE) {
+        printf("Joueur 2 à vous de jouer\n");
+    }
 }

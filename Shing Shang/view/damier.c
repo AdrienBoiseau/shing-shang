@@ -17,6 +17,18 @@ Case damier[NBLIGNE][NBCOLONE];
 Joueur joueur1;
 Joueur joueur2;
 
+Case* recupererCellule(Coordonnees coordonnees) {
+    return &damier[coordonnees.x][coordonnees.y];
+}
+
+Joueur* recupererJoueur(Couleur couleur) {
+    if (couleur == NOIR) {
+        return &joueur1;
+    } else {
+        return &joueur2;
+    }
+}
+
 void afficherDamier() {
     
     for (int i = 0; i < NBLIGNE; i++) {
@@ -124,8 +136,8 @@ void initialiserPion() {
 }
 
 void initialiser() {
-    joueur1 = creerJoueur("joueur1", ROUGE);
-    joueur2 = creerJoueur("joueur2", NOIR);
+    joueur1 = creerJoueur("joueur1", NOIR);
+    joueur2 = creerJoueur("joueur2", ROUGE);
     
     for(int i = 0; i < NBLIGNE; i++) {
         for(int j = 0; j < NBCOLONE; j++) {

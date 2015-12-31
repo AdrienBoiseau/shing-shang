@@ -21,7 +21,9 @@
 void viderBuffer();
 Coordonnees recupererCoordonnees();
 
+// fonction d'affichage
 void afficherErreurDeplacement(TypeCase type);
+void afficherTourJoueur(Joueur *joueur);
 
 
 #endif /* app_h */

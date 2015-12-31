@@ -20,6 +20,7 @@ Pion creerPion(Coordonnees coordonnees, Type type, Joueur joueur) {
     Pion nouveauPion;
     nouveauPion.cordonnees = coordonnees;
     nouveauPion.type = type;
+    nouveauPion.joueur = joueur;
     
     return nouveauPion;
 }
