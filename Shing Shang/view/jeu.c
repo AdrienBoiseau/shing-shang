@@ -26,6 +26,7 @@ void jouerCoup() {
         TypeCase caseDepart = verifierCase(from.x, from.y);
         if (caseDepart == PION)
             break;
+        
         afficherErreurDeplacement(caseDepart);
         viderBuffer();
     }
@@ -37,9 +38,9 @@ void jouerCoup() {
         TypeCase caseFin = verifierCase(to.x, to.y);
         if (caseFin == PION || caseFin == VIDE)
             break;
+        
         afficherErreurDeplacement(caseFin);
         viderBuffer();
-       
     }
 }
 

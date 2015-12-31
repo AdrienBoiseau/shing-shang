@@ -150,6 +150,10 @@ void initialiser() {
 
 TypeCase verifierCase(int x, int y) {
     
+    if(x > NBLIGNE || x < 0 || y > NBCOLONE || y < 0) {
+        return OUT;
+    }
+    
     Case cellule = damier[x][y];
     
     if (!cellule.jouable) {
@@ -171,5 +175,5 @@ void deplacerPion(Coordonnees depart, Coordonnees arrive) {
     
     //damier[arrive][arrive]=damier[depart][depart];
     //damier[depart][depart]=casejouable;
-
+    
 }

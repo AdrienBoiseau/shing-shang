@@ -60,5 +60,5 @@ void afficherErreurDeplacement(TypeCase type) {
         default:
             break;
     }
-  
+    
 }
