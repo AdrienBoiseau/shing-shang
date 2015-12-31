@@ -43,7 +43,6 @@ Coordonnees recupererCoordonnees() {
         }
         break;
     }
-    
     return creerCoordonnees(x, y);
 }
 void afficherErreurDeplacement(TypeCase type) {
@@ -53,6 +52,7 @@ void afficherErreurDeplacement(TypeCase type) {
             break;
         case OUT:
             printf("Cette case est hors du damier\n");
+            viderBuffer();
             break;
         case OBJET:
             printf("Cette case est un portail\n");

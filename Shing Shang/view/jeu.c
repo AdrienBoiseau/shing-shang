@@ -17,8 +17,8 @@
 #include <time.h>
 
 void jouerCoup(Joueur *joueur) {
-    
     // recuperer coordonnées pion
+    printf("AIDE : La dragon en haut à gauche ce situe en 2,2 // Le dragon en bas à droite ce situe en 9,9\n");
     while(1) {
         printf("Quel Pion voulez-vous jouer ? (exemple 9,2)\n");
         Coordonnees from = recupererCoordonnees();
@@ -26,16 +26,13 @@ void jouerCoup(Joueur *joueur) {
         TypeCase caseDepart = verifierCase(from.x, from.y);
         if (caseDepart == PION) {
             Case *cellule = recupererCellule(from);
-            
             if (cellule->pion.joueur.couleur == joueur->couleur) {
                 break;
             } else {
                 printf("Ce pion ne vous appartiens pas\n");
             }
         }
-        
         afficherErreurDeplacement(caseDepart);
-        viderBuffer();
     }
     
     while(1) {
@@ -47,7 +44,6 @@ void jouerCoup(Joueur *joueur) {
             break;
         
         afficherErreurDeplacement(caseFin);
-        viderBuffer();
     }
 }
 
