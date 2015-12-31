@@ -21,5 +21,7 @@
 void viderBuffer();
 Coordonnees recupererCoordonnees();
 
+void afficherErreurDeplacement(TypeCase type);
+
 
 #endif /* app_h */

@@ -23,22 +23,42 @@ void viderBuffer() //Fonction pour vider le Buffer
 }
 
 Coordonnees recupererCoordonnees() {
-    char string[5];
+    char string[6];
+    
+    int x = 0;
+    int y = 0;
     
     fgets(string, sizeof(string), stdin);
     //viderBuffer();
     
     char *token = strtok(string, ",");
     
-    int x = atoi(token);
-    int y;
+    x = atoi(token);
     
     /* walk through other tokens */
     while(token) {
         token = strtok(NULL, ",");
-        y = atoi(token);
+        if(token != NULL){
+            y = atoi(token);
+        }
         break;
     }
     
     return creerCoordonnees(x, y);
+}
+void afficherErreurDeplacement(TypeCase type) {
+    switch (type) {
+        case VIDE:
+            printf("Cette case est vide\n");
+            break;
+        case OUT:
+            printf("Cette case est hors du damier\n");
+            break;
+        case OBJET:
+            printf("Cette case est un portail\n");
+            break;
+        default:
+            break;
+    }
+  
 }
