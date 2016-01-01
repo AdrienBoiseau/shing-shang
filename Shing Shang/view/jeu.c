@@ -7,14 +7,13 @@
 //
 
 #include <stdio.h>
-#include "../model/model.h"
-#include "view.h"
-#include "app.h"
-
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+
+#include "../model/model.h"
+#include "view.h"
+#include "app.h"
 
 void jouerCoup(Joueur *joueur) {
     Coordonnees from;

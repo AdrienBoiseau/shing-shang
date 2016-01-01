@@ -141,7 +141,7 @@ void initialiserPion() {
 
 void initialiser() {
     joueur1 = creerJoueur("joueur1", NOIR);
-    joueur2 = creerJoueur("joueur2", ROUGE);
+    joueur2 = creerJoueur("joueur2", NOIR);
     
     for(int i = 0; i < NBLIGNE; i++) {
         for(int j = 0; j < NBCOLONE; j++) {
