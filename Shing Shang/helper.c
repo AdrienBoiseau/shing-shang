@@ -32,13 +32,13 @@ Coordonnees recupererCoordonnees() {
     
     char *token = strtok(string, ",");
     
-    x = atoi(token);
+    y = atoi(token);
     
     /* walk through other tokens */
     while(token) {
         token = strtok(NULL, ",");
         if(token != NULL){
-            y = atoi(token);
+            x = atoi(token);
         }
         break;
     }

@@ -73,6 +73,7 @@ void run() {
             joueur = recupererJoueur(NOIR);
         }
         
+            viderBuffer();
     } while (1);
 }
 

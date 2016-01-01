@@ -27,10 +27,10 @@ Coordonnees haut(Coordonnees initial, Type typePion) {
     switch (typePion) {
         case SINGE:
         case DRAGON:
-            return creerCoordonnees(initial.x, initial.y - 2);
+            return creerCoordonnees(initial.x - 2, initial.y);
             break;
         default:
-            return creerCoordonnees(initial.x, initial.y - 1);
+            return creerCoordonnees(initial.x - 1, initial.y);
             break;
     }
 }
@@ -51,10 +51,10 @@ Coordonnees droit(Coordonnees initial, Type typePion) {
     switch (typePion) {
         case SINGE:
         case DRAGON:
-            return creerCoordonnees(initial.x + 2, initial.y);
+            return creerCoordonnees(initial.x, initial.y + 2);
             break;
         default:
-            return creerCoordonnees(initial.x + 1, initial.y);
+            return creerCoordonnees(initial.x, initial.y + 1);
             break;
     }
     
@@ -77,10 +77,10 @@ Coordonnees bas(Coordonnees initial, Type typePion) {
     switch (typePion) {
         case SINGE:
         case DRAGON:
-            return creerCoordonnees(initial.x, initial.y + 2);
+            return creerCoordonnees(initial.x + 2, initial.y);
             break;
         default:
-            return creerCoordonnees(initial.x, initial.y + 1);
+            return creerCoordonnees(initial.x + 1, initial.y);
             break;
     }
     
@@ -90,10 +90,10 @@ Coordonnees basgauche(Coordonnees initial, Type typePion) {
     switch (typePion) {
         case SINGE:
         case DRAGON:
-            return creerCoordonnees(initial.x - 2, initial.y + 2);
+            return creerCoordonnees(initial.x + 2, initial.y - 2);
             break;
         default:
-            return creerCoordonnees(initial.x - 1, initial.y + 1);
+            return creerCoordonnees(initial.x + 1, initial.y - 1);
             break;
     }
     
@@ -103,10 +103,10 @@ Coordonnees gauche(Coordonnees initial, Type typePion) {
     switch (typePion) {
         case SINGE:
         case DRAGON:
-            return creerCoordonnees(initial.x - 2, initial.y);
+            return creerCoordonnees(initial.x, initial.y - 2);
             break;
         default:
-            return creerCoordonnees(initial.x - 1, initial.y);
+            return creerCoordonnees(initial.x, initial.y - 1);
             break;
     }
     
@@ -116,10 +116,10 @@ Coordonnees hautdroit(Coordonnees initial, Type typePion) {
     switch (typePion) {
         case SINGE:
         case DRAGON:
-            return creerCoordonnees(initial.x + 2, initial.y - 2);
+            return creerCoordonnees(initial.x - 2, initial.y + 2);
             break;
         default:
-            return creerCoordonnees(initial.x + 1, initial.y - 1);
+            return creerCoordonnees(initial.x - 1, initial.y + 1);
             break;
     }
     
