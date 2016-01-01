@@ -12,7 +12,7 @@
 #include "view/view.h"
 
 int main(void) {
-    
+        
     initialiser();
     
     afficherDamier();

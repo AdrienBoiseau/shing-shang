@@ -31,6 +31,8 @@ Joueur* recupererJoueur(Couleur couleur) {
 
 void afficherDamier() {
     
+    printf("vv Joueur 1 vv");
+    
     for (int i = 0; i < NBLIGNE; i++) {
         for (int j = 0; j < NBCOLONE; j++) {
             
@@ -60,6 +62,8 @@ void afficherDamier() {
         
         printf("\n");
     }
+    
+    printf("^^ Joueur 2 ^^\n\n");
 }
 void initialiserPion() {
     
@@ -184,20 +188,41 @@ TypeCase verifierCase(int x, int y) {
 }
 
 Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction direction) {
-    switch (typePion) {
-        case SINGE:
-            
-            break;
-        case DRAGON:
-            
-            break;
-        default:
+    Coordonnees arrivee;
     
+    switch (direction) {
+        case HAUT:
+            arrivee = haut(depart, typePion);
+            break;
+        case HAUTDROIT:
+            arrivee = hautdroit(depart, typePion);
+            break;
+        case DROIT:
+            arrivee = droit(depart, typePion);
+            break;
+        case BASDROIT:
+            arrivee = basdroit(depart, typePion);
+            break;
+        case BAS:
+            arrivee = bas(depart, typePion);
+            break;
+        case BASGAUCHE:
+            arrivee = basgauche(depart, typePion);
+            break;
+        case GAUCHE:
+            arrivee = gauche(depart, typePion);
+            break;
+        case HAUTGAUCHE:
+            arrivee = hautgauche(depart, typePion);
             break;
     }
+    
+    return arrivee;
 }
 
 void deplacerPion(Coordonnees depart, Coordonnees arrive) {
+    
+    printf("je dois deplacer le pion\n");
     
     // tester si case destination vide
     // ou si case desti

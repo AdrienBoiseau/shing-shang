@@ -51,10 +51,11 @@ void jouerCoup(Joueur *joueur) {
         TypeCase caseFin = verifierCase(to.x, to.y);
         if (caseFin == PION || caseFin == VIDE) 
             break;
-         
         
         afficherErreurDeplacement(caseFin);
     }
+    
+    deplacerPion(from, to);
 }
 
 void run() {
