@@ -185,6 +185,9 @@ TypeCase verifierCase(int x, int y) {
 
 void deplacerPion(Coordonnees depart, Coordonnees arrive) {
     
+    // tester si case destination vide
+    // ou si case desti
+    
     //damier[arrive][arrive]=damier[depart][depart];
     //damier[depart][depart]=casejouable;
     

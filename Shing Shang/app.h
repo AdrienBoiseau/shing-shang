@@ -24,6 +24,6 @@ Coordonnees recupererCoordonnees();
 // fonction d'affichage
 void afficherErreurDeplacement(TypeCase type);
 void afficherTourJoueur(Joueur *joueur);
-
+char* afficherTypeCase(Type type);
 
 #endif /* app_h */

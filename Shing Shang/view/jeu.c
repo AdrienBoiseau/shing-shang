@@ -27,6 +27,7 @@ void jouerCoup(Joueur *joueur) {
         if (caseDepart == PION) {
             Case *cellule = recupererCellule(from);
             if (cellule->pion.joueur.couleur == joueur->couleur) {
+                printf("Vous avez selectionné un %s\n", afficherTypeCase(cellule->pion.type));
                 break;
             } else {
                 printf("Ce pion ne vous appartiens pas\n");
@@ -34,6 +35,7 @@ void jouerCoup(Joueur *joueur) {
         }
         afficherErreurDeplacement(caseDepart);
     }
+    
     
     while(1) {
         printf("Où voulez-vous aller? (exemple 9,2)\n");

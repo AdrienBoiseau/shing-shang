@@ -11,8 +11,13 @@
 
 typedef enum
 {
-    DRAGON = 3 , LION = 2 , SINGE = 1, PORTAIL = 0
+    DRAGON = 3 , SINGE = 2, LION = 1, PORTAIL = 0
 } Type;
+
+typedef enum
+{
+   HAUT = 1, HAUTDROIT = 2, DROIT = 3, BASDROIT = 4, BAS = 5, BASGAUCHE = 6, GAUCHE = 7, HAUTGAUCHE = 8
+} Direction;
 
 typedef enum
 {

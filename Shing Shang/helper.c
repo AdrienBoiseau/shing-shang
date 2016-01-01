@@ -45,6 +45,7 @@ Coordonnees recupererCoordonnees() {
     }
     return creerCoordonnees(x, y);
 }
+
 void afficherErreurDeplacement(TypeCase type) {
     switch (type) {
         case VIDE:
@@ -67,5 +68,22 @@ void afficherTourJoueur(Joueur *joueur) {
         printf("Joueur 1 à vous de jouer\n");
     } else if(joueur->couleur == ROUGE) {
         printf("Joueur 2 à vous de jouer\n");
+    }
+}
+
+char* afficherTypeCase(Type type) {
+    switch (type) {
+        case DRAGON:
+            return "DRAGON";
+            break;
+        case LION:
+            return "LION";
+            break;
+        case SINGE:
+            return "SINGE";
+            break;
+        default:
+            return "PION";
+            break;
     }
 }
