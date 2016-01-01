@@ -29,7 +29,6 @@ Coordonnees recupererCoordonnees() {
     int y = 0;
     
     fgets(string, sizeof(string), stdin);
-    //viderBuffer();
     
     char *token = strtok(string, ",");
     
@@ -43,7 +42,16 @@ Coordonnees recupererCoordonnees() {
         }
         break;
     }
+    
     return creerCoordonnees(x, y);
+}
+
+Direction recupererDirection() {
+    char direction[2];
+    
+    fgets(direction, sizeof(direction), stdin);
+
+    return atoi(direction);
 }
 
 void afficherErreurDeplacement(TypeCase type) {

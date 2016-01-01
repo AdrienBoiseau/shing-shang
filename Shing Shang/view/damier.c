@@ -183,6 +183,20 @@ TypeCase verifierCase(int x, int y) {
     return VIDE;
 }
 
+Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction direction) {
+    switch (typePion) {
+        case SINGE:
+            
+            break;
+        case DRAGON:
+            
+            break;
+        default:
+    
+            break;
+    }
+}
+
 void deplacerPion(Coordonnees depart, Coordonnees arrive) {
     
     // tester si case destination vide

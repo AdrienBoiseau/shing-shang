@@ -17,15 +17,20 @@
 #include <time.h>
 
 void jouerCoup(Joueur *joueur) {
+    Coordonnees from;
+    Coordonnees to;
+    Case *cellule;
+    
     // recuperer coordonnées pion
     printf("AIDE : La dragon en haut à gauche ce situe en 2,2 // Le dragon en bas à droite ce situe en 9,9\n");
     while(1) {
         printf("Quel Pion voulez-vous jouer ? (exemple 9,2)\n");
-        Coordonnees from = recupererCoordonnees();
+        from = recupererCoordonnees();
         
         TypeCase caseDepart = verifierCase(from.x, from.y);
         if (caseDepart == PION) {
-            Case *cellule = recupererCellule(from);
+            cellule = recupererCellule(from);
+            
             if (cellule->pion.joueur.couleur == joueur->couleur) {
                 printf("Vous avez selectionné un %s\n", afficherTypeCase(cellule->pion.type));
                 break;
@@ -36,14 +41,17 @@ void jouerCoup(Joueur *joueur) {
         afficherErreurDeplacement(caseDepart);
     }
     
-    
     while(1) {
-        printf("Où voulez-vous aller? (exemple 9,2)\n");
-        Coordonnees to = recupererCoordonnees();
+        printf("Dans quel direction voulez-vous aller ?\n");
+        printf("HAUT = 1, HAUTDROIT = 2, DROIT = 3, BASDROIT = 4, BAS = 5, BASGAUCHE = 6, GAUCHE = 7, HAUTGAUCHE = 8\n");
+        
+        Direction direction = recupererDirection();
+        to = preparerDeplacement(from, cellule->pion.type, direction);
         
         TypeCase caseFin = verifierCase(to.x, to.y);
-        if (caseFin == PION || caseFin == VIDE)
+        if (caseFin == PION || caseFin == VIDE) 
             break;
+         
         
         afficherErreurDeplacement(caseFin);
     }

@@ -20,6 +20,7 @@
 
 void viderBuffer();
 Coordonnees recupererCoordonnees();
+Direction recupererDirection();
 
 // fonction d'affichage
 void afficherErreurDeplacement(TypeCase type);

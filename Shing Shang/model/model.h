@@ -62,4 +62,13 @@ Pion creerPion(Coordonnees coordonnes, Type type, Joueur joueur);
 Joueur creerJoueur(char nom[255], Couleur couleur);
 Coordonnees creerCoordonnees(int x, int y);
 
+Coordonnees haut(Coordonnees initial, Type typePion);
+Coordonnees hautdroit(Coordonnees initial, Type typePion);
+Coordonnees droit(Coordonnees initial, Type typePion);
+Coordonnees basdroit(Coordonnees initial, Type typePion);
+Coordonnees bas(Coordonnees initial, Type typePion);
+Coordonnees basgauche(Coordonnees initial, Type typePion);
+Coordonnees gauche(Coordonnees initial, Type typePion);
+Coordonnees hautgauche(Coordonnees initial, Type typePion);
+
 #endif /* model_h */

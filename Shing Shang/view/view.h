@@ -20,6 +20,7 @@ TypeCase verifierCase(int x, int y);
 Case* recupererCellule(Coordonnees coordonnees);
 Joueur* recupererJoueur(Couleur couleur);
 
+Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction direction);
 void deplacerPion(Coordonnees depart, Coordonnees arrive);
 void jouerCoup();
 void run();
