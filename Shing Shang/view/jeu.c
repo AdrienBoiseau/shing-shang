@@ -18,6 +18,7 @@
 void jouerCoup(Joueur *joueur) {
     Coordonnees from;
     Coordonnees to;
+    Direction direction;
     Case *cellule;
     
     // recuperer coordonnées pion
@@ -44,7 +45,7 @@ void jouerCoup(Joueur *joueur) {
         printf("Dans quel direction voulez-vous aller ?\n");
         printf("HAUT = 1, HAUTDROIT = 2, DROIT = 3, BASDROIT = 4, BAS = 5, BASGAUCHE = 6, GAUCHE = 7, HAUTGAUCHE = 8\n");
         
-        Direction direction = recupererDirection();
+        direction = recupererDirection();
         to = preparerDeplacement(from, cellule->pion.type, direction);
         
         TypeCase caseFin = verifierCase(to.x, to.y);
@@ -54,7 +55,7 @@ void jouerCoup(Joueur *joueur) {
         afficherErreurDeplacement(caseFin);
     }
     
-    deplacerPion(from, to);
+    deplacerPion(from, to, direction);
 }
 
 void run() {

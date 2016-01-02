@@ -57,10 +57,12 @@ typedef struct
 
 Case creerCase(int x, int y, int jouable, int pleine);
 void remplirCase(Case *cellule);
+void updateCase(Case *celluleDepart, Case *celluleArrivee);
 
 Pion creerPion(Coordonnees coordonnes, Type type, Joueur joueur);
 Joueur creerJoueur(char nom[255], Couleur couleur);
 Coordonnees creerCoordonnees(int x, int y);
+Coordonnees coordonneesDeplacement(Direction direction);
 
 Coordonnees haut(Coordonnees initial, Type typePion);
 Coordonnees hautdroit(Coordonnees initial, Type typePion);

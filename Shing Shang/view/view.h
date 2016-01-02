@@ -21,7 +21,9 @@ Case* recupererCellule(Coordonnees coordonnees);
 Joueur* recupererJoueur(Couleur couleur);
 
 Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction direction);
-void deplacerPion(Coordonnees depart, Coordonnees arrive);
+void deplacerPion(Coordonnees depart, Coordonnees arrive, Direction direction);
+Coordonnees sauterPion(Case *cellule, Direction direction);
+
 void jouerCoup();
 void run();
 

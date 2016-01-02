@@ -220,20 +220,33 @@ Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction dir
     return arrivee;
 }
 
-void deplacerPion(Coordonnees depart, Coordonnees arrive) {
+void deplacerPion(Coordonnees depart, Coordonnees arrive, Direction direction) {
     
     
     Case *celluleDepart = &damier[depart.x][depart.y];
     Case *celluleArrivee = &damier[arrive.x][arrive.y];
+    
+    if (celluleArrivee->pleine == 0) {
+        updateCase(celluleDepart, celluleArrivee);
+    } else {
+        
+        do {
+            
+            if (celluleDepart->pion.joueur.couleur == celluleArrivee->pion.joueur.couleur) {
+                arrive = sauterPion(celluleArrivee, direction);
+                celluleArrivee = &damier[arrive.x][arrive.y];
+            } else {
+                
+            }
+            
+        } while(celluleArrivee->pleine == 1);
+        
+        updateCase(celluleDepart, celluleArrivee);
+    }
+}
 
-    celluleArrivee->pion = creerPion(arrive, celluleDepart->pion.type, celluleDepart->pion.joueur);
-    *celluleDepart = creerCase(depart.y, depart.x, 1, 0);
-
+Coordonnees sauterPion(Case *cellule, Direction direction) {
+    Coordonnees deplacement = coordonneesDeplacement(direction);
     
-    // tester si case destination vide
-    // ou si case desti
-    
-    //damier[arrive][arrive]=damier[depart][depart];
-    //damier[depart][depart]=casejouable;
-    
+    return creerCoordonnees(cellule->coordonnees.x + deplacement.x, cellule->coordonnees.y + deplacement.y);
 }
