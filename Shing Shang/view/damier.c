@@ -141,7 +141,7 @@ void initialiserPion() {
 
 void initialiser() {
     joueur1 = creerJoueur("joueur1", NOIR);
-    joueur2 = creerJoueur("joueur2", NOIR);
+    joueur2 = creerJoueur("joueur2", ROUGE);
     
     for(int i = 0; i < NBLIGNE; i++) {
         for(int j = 0; j < NBCOLONE; j++) {
@@ -226,10 +226,11 @@ void deplacerPion(Coordonnees depart, Coordonnees arrive, Direction direction) {
     Case *celluleDepart = &damier[depart.x][depart.y];
     Case *celluleArrivee = &damier[arrive.x][arrive.y];
     
+    // si cellule vide
     if (celluleArrivee->pleine == 0) {
         updateCase(celluleDepart, celluleArrivee);
     } else {
-        
+        // si cellule contient pion
         do {
             
             if (celluleDepart->pion.joueur.couleur == celluleArrivee->pion.joueur.couleur) {

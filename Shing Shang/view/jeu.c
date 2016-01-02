@@ -62,18 +62,20 @@ void run() {
     Joueur *joueur = choixJoueur();
     
     do {
+        
         afficherTourJoueur(joueur);
         jouerCoup(joueur);
+        
         system("clear");
         afficherDamier();
         
         if (joueur->couleur == NOIR) {
             joueur = recupererJoueur(ROUGE);
-        } else if (joueur->couleur == ROUGE) {
+        } else {
             joueur = recupererJoueur(NOIR);
         }
         
-            viderBuffer();
+        viderBuffer();
     } while (1);
 }
 

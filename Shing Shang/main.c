@@ -19,7 +19,5 @@ int main(void) {
     
     run();
     
-    //choixjoueur(joueur);
-    
     return 0;
 }
