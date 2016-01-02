@@ -3,7 +3,6 @@
 #include <string.h>
 
 #include "app.h"
-#include "model.h"
 
 //Fonction pour vider le Buffer
 void viderBuffer()

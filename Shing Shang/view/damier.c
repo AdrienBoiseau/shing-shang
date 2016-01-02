@@ -1,13 +1,16 @@
-#include <stdio.h>
-#include <string.h>
-
-#include "model.h"
-#include "view.h"
-#include "app.h"
+//
+//  damier.c
+//  Shing Shang
+//
+//  Created by Adrien Boiseau on 15/11/2015.
+//  Copyright © 2015 Adrien Boiseau. All rights reserved.
+//
+#include "../app.h"
 
 Case damier[NBLIGNE][NBCOLONE];
 Joueur joueur1;
 Joueur joueur2;
+
 //Fonction pour recuperer les coordonnes d'une cellule
 Case* recupererCellule(Coordonnees coordonnees) {
     return &damier[coordonnees.x][coordonnees.y];

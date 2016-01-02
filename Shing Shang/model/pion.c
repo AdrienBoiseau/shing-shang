@@ -1,4 +1,12 @@
-#include "model.h"
+//
+//  pion.c
+//  Shing Shang
+//
+//  Created by Adrien Boiseau on 15/11/2015.
+//  Copyright © 2015 Adrien Boiseau. All rights reserved.
+//
+
+#include "../app.h"
 
 /**
  *  Permet de créer les coordonnees

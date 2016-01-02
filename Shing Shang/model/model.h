@@ -1,5 +1,12 @@
+//  model.h
+//  Shing Shang
+//
+//  Created by Adrien Boiseau on 15/11/2015.
+//  Copyright © 2015 Adrien Boiseau. All rights reserved.
+//
 #ifndef model_h
 #define model_h
+
 //Structures et type enumeré
 typedef enum
 {

@@ -3,9 +3,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "../model/model.h"
-#include "view.h"
-#include "app.h"
+#include "../app.h"
 
 /**
  *  Fonction permettant de gerer les différents cas d'erreur lors de la selection d'un pion

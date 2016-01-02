@@ -2,7 +2,9 @@
 #define app_h
 
 #include <stdio.h>
-#include "model.h"
+
+#include "view/view.h"
+#include "model/model.h"
 
 #define COULEUR_NOIR "30"
 #define COULEUR_ROUGE "31"

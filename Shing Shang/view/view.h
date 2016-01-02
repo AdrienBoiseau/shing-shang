@@ -1,5 +1,15 @@
+//
+//  view.h
+//  Shing Shang
+//
+//  Created by Adrien Boiseau on 15/11/2015.
+//  Copyright © 2015 Adrien Boiseau. All rights reserved.
+//
+
 #ifndef view_h
 #define view_h
+
+#include "../model/model.h"
 
 #define NBLIGNE 12
 #define NBCOLONE 12
