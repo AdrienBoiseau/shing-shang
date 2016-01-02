@@ -25,6 +25,8 @@ void remplirCase(Case *cellule) {
 
 void updateCase(Case *celluleDepart, Case *celluleArrivee) {
     celluleArrivee->pion = creerPion(celluleArrivee->coordonnees, celluleDepart->pion.type, celluleDepart->pion.joueur);
+    celluleArrivee->pleine = 1;
+    
     *celluleDepart = creerCase(celluleDepart->coordonnees.y, celluleDepart->coordonnees.x, 1, 0);
 }
 

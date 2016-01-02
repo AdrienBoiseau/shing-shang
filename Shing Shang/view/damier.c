@@ -222,22 +222,27 @@ Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction dir
 
 void deplacerPion(Coordonnees depart, Coordonnees arrive, Direction direction) {
     
-    
     Case *celluleDepart = &damier[depart.x][depart.y];
     Case *celluleArrivee = &damier[arrive.x][arrive.y];
     
     // si cellule vide
     if (celluleArrivee->pleine == 0) {
         updateCase(celluleDepart, celluleArrivee);
-    } else {
+    } else if(celluleArrivee->pleine == 1) {
         // si cellule contient pion
         do {
+            // annule deplacement si pion plus fort
+            if (celluleDepart->pion.type < celluleArrivee->pion.type) {
+                printf("Votre %s ne peut pas sauter un %s\n",
+                       afficherTypeCase(celluleDepart->pion.type), afficherTypeCase(celluleArrivee->pion.type));
+                return;
+            }
             
             if (celluleDepart->pion.joueur.couleur == celluleArrivee->pion.joueur.couleur) {
                 arrive = sauterPion(celluleArrivee, direction);
                 celluleArrivee = &damier[arrive.x][arrive.y];
             } else {
-                
+                // pion ennemi
             }
             
         } while(celluleArrivee->pleine == 1);
