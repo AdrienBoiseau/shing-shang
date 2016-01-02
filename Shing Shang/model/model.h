@@ -1,14 +1,6 @@
-//
-//  model.h
-//  Shing Shang
-//
-//  Created by Paul on 15/11/2015.
-//  Copyright © 2015 Adrien Boiseau. All rights reserved.
-//
-
 #ifndef model_h
 #define model_h
-
+//Structures et type enumeré
 typedef enum
 {
     DRAGON = 3 , SINGE = 1, LION = 2, PORTAIL = 9
@@ -54,7 +46,7 @@ typedef struct
     Coordonnees coordonnees;
     Pion pion;
 } Case;
-
+//Différente fonction utilisé
 Case creerCase(int x, int y, int jouable, int pleine);
 void remplirCase(Case *cellule);
 void updateCase(Case *celluleDepart, Case *celluleArrivee);

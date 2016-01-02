@@ -1,11 +1,3 @@
-//
-//  damier.c
-//  Shing Shang
-//
-//  Created by Paul on 15/11/2015.
-//  Copyright © 2015 Adrien Boiseau. All rights reserved.
-//
-
 #include <stdio.h>
 #include <string.h>
 
@@ -16,11 +8,11 @@
 Case damier[NBLIGNE][NBCOLONE];
 Joueur joueur1;
 Joueur joueur2;
-
+//Fonction pour recuperer les coordonnes d'une cellule
 Case* recupererCellule(Coordonnees coordonnees) {
     return &damier[coordonnees.x][coordonnees.y];
 }
-
+//Fonction pour recuperer le joueur
 Joueur* recupererJoueur(Couleur couleur) {
     if (couleur == NOIR) {
         return &joueur1;
@@ -28,7 +20,9 @@ Joueur* recupererJoueur(Couleur couleur) {
         return &joueur2;
     }
 }
-
+/**
+ *  Fonction pour afficher le damier
+ */
 void afficherDamier() {
     
     printf("==> Joueur 1 <==");
@@ -50,10 +44,11 @@ void afficherDamier() {
                     printf("*");
                     break;
                 default:
+                    //Si case jouable affiche 0
                     if(damier[i][j].jouable) {
                         printf("0");
                     } else {
-                        printf(" ");
+                        printf(" ");//Sinon afficher un "blanc"
                     }
                     break;
             }
@@ -65,6 +60,10 @@ void afficherDamier() {
     
     printf("==> Joueur 2 <==\n\n");
 }
+
+/**
+ Fonction permettant d'initialiser les pions à leur position de départ
+ */
 void initialiserPion() {
     
     //JOUEUR 1
@@ -139,6 +138,9 @@ void initialiserPion() {
     remplirCase(&damier[8][6]);
 }
 
+/**
+ Fonction permettant d'initialiser le damier avec ça forme spécifique
+ */
 void initialiser() {
     joueur1 = creerJoueur("joueur1", NOIR);
     joueur2 = creerJoueur("joueur2", ROUGE);
@@ -163,7 +165,13 @@ void initialiser() {
     
     initialiserPion();
 }
-
+/**
+ *  Fonction permettant de retourner si une case est en dehors du damier
+ *  Si une case est pleine, si elle contient un pion ou un portail
+ *  @param x coordonnees de la case x
+ *  @param y coordonnees de la case y
+ *
+ */
 TypeCase verifierCase(int x, int y) {
     
     if(x > NBLIGNE || x < 0 || y > NBCOLONE || y < 0) {
@@ -178,7 +186,7 @@ TypeCase verifierCase(int x, int y) {
     
     if (cellule.pleine == 1) {
         if(cellule.pion.type == PORTAIL) {
-            return OBJET;
+            return OBJET;//Objet pour portail
         } else {
             return PION;
         }
@@ -187,6 +195,14 @@ TypeCase verifierCase(int x, int y) {
     return VIDE;
 }
 
+/**
+ *  Fonction permettant de recuperer les coordonnes de depart et le type de pion ainsi que la direction
+ *  afin de préparer un deplacement
+ *  @param depart    coordonnées de départ sélectionné
+ *  @param typePion  type de pion sélectionné
+ *  @param direction direciton dans laquelle la personne souhaite déplacer son pion
+ *
+ */
 Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction direction) {
     Coordonnees arrivee;
     
@@ -219,7 +235,11 @@ Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction dir
     
     return arrivee;
 }
-
+/**
+ * Fonction permmettant de déplacer de regarder toute les vérifications pour les déplacements
+ * Elle permet d'effectuer un saut, de regarder à qui appartient les pions
+ * Gerer si un pion et manger par un autre
+ */
 void deplacerPion(Coordonnees depart, Coordonnees arrive, Direction direction) {
     
     Case *celluleDepart = &damier[depart.x][depart.y];
@@ -250,7 +270,7 @@ void deplacerPion(Coordonnees depart, Coordonnees arrive, Direction direction) {
         updateCase(celluleDepart, celluleArrivee);
     }
 }
-
+//Fonction permettant d'effectuer le saut de pion
 Coordonnees sauterPion(Case *cellule, Direction direction) {
     Coordonnees deplacement = coordonneesDeplacement(direction);
     

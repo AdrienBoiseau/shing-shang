@@ -1,11 +1,3 @@
-//
-//  app.h
-//  Shing Shang
-//
-//  Created by Adrien Boiseau on 30/12/2015.
-//  Copyright © 2015 Adrien Boiseau. All rights reserved.
-//
-
 #ifndef app_h
 #define app_h
 
@@ -18,6 +10,7 @@
 #define clrscr() printf("\033[H\033[2J")
 #define couleur(param) printf("\033[%sm", param)
 
+//Ficher de header pour les fonctions de coordonnees
 void viderBuffer();
 Coordonnees recupererCoordonnees();
 Direction recupererDirection();

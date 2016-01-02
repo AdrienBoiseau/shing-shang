@@ -1,11 +1,3 @@
-//
-//  helper.c
-//  Shing Shang
-//
-//  Created by Adrien Boiseau on 29/12/2015.
-//  Copyright © 2015 Adrien Boiseau. All rights reserved.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,7 +5,8 @@
 #include "app.h"
 #include "model.h"
 
-void viderBuffer() //Fonction pour vider le Buffer
+//Fonction pour vider le Buffer
+void viderBuffer()
 {
     int c = 0;
     while(c != '\n' && c != EOF)
@@ -22,6 +15,7 @@ void viderBuffer() //Fonction pour vider le Buffer
     }
 }
 
+//Cette fonction permet de recuperer les coordonnees sous forme de 3,2 et supprimer la virgule
 Coordonnees recupererCoordonnees() {
     char string[6];
     
@@ -45,7 +39,7 @@ Coordonnees recupererCoordonnees() {
     
     return creerCoordonnees(x, y);
 }
-
+//Cette fonction permet de recuperer la direction choisi
 Direction recupererDirection() {
     char direction[2];
     
@@ -53,7 +47,7 @@ Direction recupererDirection() {
 
     return atoi(direction);
 }
-
+//Cette fonction afficher les erreurs de déplacement
 void afficherErreurDeplacement(TypeCase type) {
     switch (type) {
         case VIDE:
@@ -70,7 +64,7 @@ void afficherErreurDeplacement(TypeCase type) {
             break;
     }
 }
-
+//Fonction qui affiche a qui de joueur
 void afficherTourJoueur(Joueur *joueur) {
     if(joueur->couleur == NOIR) {
         printf("Joueur 1 à vous de jouer\n");
@@ -78,7 +72,7 @@ void afficherTourJoueur(Joueur *joueur) {
         printf("Joueur 2 à vous de jouer\n");
     }
 }
-
+//Fonction pour afficher le pion que contient la case
 char* afficherTypeCase(Type type) {
     switch (type) {
         case DRAGON:

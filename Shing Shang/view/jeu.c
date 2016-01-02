@@ -1,11 +1,3 @@
-//
-//  jeu.c
-//  Shing Shang
-//
-//  Created by Adrien Boiseau on 29/12/2015.
-//  Copyright © 2015 Adrien Boiseau. All rights reserved.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,6 +7,10 @@
 #include "view.h"
 #include "app.h"
 
+/**
+ *  Fonction permettant de gerer les différents cas d'erreur lors de la selection d'un pion
+ *  Elle permet aussi de gerer à qui appartient les pions pour chaque joueur
+ */
 void jouerCoup(Joueur *joueur) {
     Coordonnees from;
     Coordonnees to;
@@ -30,7 +26,7 @@ void jouerCoup(Joueur *joueur) {
         TypeCase caseDepart = verifierCase(from.x, from.y);
         if (caseDepart == PION) {
             cellule = recupererCellule(from);
-            
+            //Regarde à qui appartient le pion sélectionné
             if (cellule->pion.joueur.couleur == joueur->couleur) {
                 printf("Vous avez selectionné un %s\n", afficherTypeCase(cellule->pion.type));
                 break;
@@ -40,7 +36,7 @@ void jouerCoup(Joueur *joueur) {
         }
         afficherErreurDeplacement(caseDepart);
     }
-    
+    //Permet de choisir la direction du déplacement
     while(1) {
         printf("Dans quel direction voulez-vous aller ?\n");
         printf("HAUT = 1, HAUTDROIT = 2, DROIT = 3, BASDROIT = 4, BAS = 5, BASGAUCHE = 6, GAUCHE = 7, HAUTGAUCHE = 8\n");
@@ -55,9 +51,13 @@ void jouerCoup(Joueur *joueur) {
         afficherErreurDeplacement(caseFin);
     }
     
-    deplacerPion(from, to, direction);
+    deplacerPion(from, to, direction); //Appel la fonction de déplacement
 }
-
+/**
+ *  La fonction regarde quel est la couleur du dernier joueur qui a jouer
+ *  et permet ensuite de changer le joueur qui joue
+ *  Cette fonction est répeter à chaque fois lors de l'exécution du programme
+ */
 void run() {
     Joueur *joueur = choixJoueur();
     
@@ -78,7 +78,9 @@ void run() {
         viderBuffer();
     } while (1);
 }
-
+/**
+ * Cette fonction permet de choisir quel joueur commence à jouer
+ */
 Joueur* choixJoueur()
 {
     int joueur = 0;
