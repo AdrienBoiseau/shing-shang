@@ -11,7 +11,6 @@
 #include <string.h>
 
 #include "app.h"
-#include "model.h"
 
 void viderBuffer() //Fonction pour vider le Buffer
 {

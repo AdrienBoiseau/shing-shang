@@ -11,9 +11,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "../model/model.h"
-#include "view.h"
-#include "app.h"
+#include "../app.h"
 
 void jouerCoup(Joueur *joueur) {
     Coordonnees from;

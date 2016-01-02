@@ -6,10 +6,7 @@
 //  Copyright © 2015 Adrien Boiseau. All rights reserved.
 //
 
-#include <stdio.h>
-#include <string.h>
-#include "model/model.h"
-#include "view/view.h"
+#include "app.h"
 
 int main(void) {
         

@@ -2,7 +2,7 @@
 //  model.h
 //  Shing Shang
 //
-//  Created by Paul on 15/11/2015.
+//  Created by Adrien Boiseau on 15/11/2015.
 //  Copyright © 2015 Adrien Boiseau. All rights reserved.
 //
 
