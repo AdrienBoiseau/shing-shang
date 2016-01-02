@@ -15,6 +15,7 @@ Joueur joueur2;
 Case* recupererCellule(Coordonnees coordonnees) {
     return &damier[coordonnees.x][coordonnees.y];
 }
+
 //Fonction pour recuperer le joueur
 Joueur* recupererJoueur(Couleur couleur) {
     if (couleur == NOIR) {
@@ -23,6 +24,7 @@ Joueur* recupererJoueur(Couleur couleur) {
         return &joueur2;
     }
 }
+
 /**
  *  Fonction pour afficher le damier
  */
@@ -168,6 +170,7 @@ void initialiser() {
     
     initialiserPion();
 }
+
 /**
  *  Fonction permettant de retourner si une case est en dehors du damier
  *  Si une case est pleine, si elle contient un pion ou un portail
@@ -238,6 +241,7 @@ Coordonnees preparerDeplacement(Coordonnees depart, Type typePion, Direction dir
     
     return arrivee;
 }
+
 /**
  * Fonction permmettant de déplacer de regarder toute les vérifications pour les déplacements
  * Elle permet d'effectuer un saut, de regarder à qui appartient les pions
@@ -273,6 +277,7 @@ void deplacerPion(Coordonnees depart, Coordonnees arrive, Direction direction) {
         updateCase(celluleDepart, celluleArrivee);
     }
 }
+
 //Fonction permettant d'effectuer le saut de pion
 Coordonnees sauterPion(Case *cellule, Direction direction) {
     Coordonnees deplacement = coordonneesDeplacement(direction);

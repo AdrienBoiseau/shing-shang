@@ -38,14 +38,16 @@ Coordonnees recupererCoordonnees() {
     
     return creerCoordonnees(x, y);
 }
+
 //Cette fonction permet de recuperer la direction choisi
 Direction recupererDirection() {
     char direction[2];
     
     fgets(direction, sizeof(direction), stdin);
-
+    
     return atoi(direction);
 }
+
 //Cette fonction afficher les erreurs de déplacement
 void afficherErreurDeplacement(TypeCase type) {
     switch (type) {
@@ -63,6 +65,7 @@ void afficherErreurDeplacement(TypeCase type) {
             break;
     }
 }
+
 //Fonction qui affiche a qui de joueur
 void afficherTourJoueur(Joueur *joueur) {
     if(joueur->couleur == NOIR) {
@@ -71,6 +74,7 @@ void afficherTourJoueur(Joueur *joueur) {
         printf("Joueur 2 à vous de jouer\n");
     }
 }
+
 //Fonction pour afficher le pion que contient la case
 char* afficherTypeCase(Type type) {
     switch (type) {

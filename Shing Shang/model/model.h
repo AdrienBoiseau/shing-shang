@@ -15,7 +15,7 @@ typedef enum
 
 typedef enum
 {
-   HAUT = 1, HAUTDROIT = 2, DROIT = 3, BASDROIT = 4, BAS = 5, BASGAUCHE = 6, GAUCHE = 7, HAUTGAUCHE = 8
+    HAUT = 1, HAUTDROIT = 2, DROIT = 3, BASDROIT = 4, BAS = 5, BASGAUCHE = 6, GAUCHE = 7, HAUTGAUCHE = 8
 } Direction;
 
 typedef enum
@@ -53,7 +53,8 @@ typedef struct
     Coordonnees coordonnees;
     Pion pion;
 } Case;
-//Différente fonction utilisé
+
+//Différentes fonctions utilisées
 Case creerCase(int x, int y, int jouable, int pleine);
 void remplirCase(Case *cellule);
 void updateCase(Case *celluleDepart, Case *celluleArrivee);

@@ -51,6 +51,7 @@ void jouerCoup(Joueur *joueur) {
     
     deplacerPion(from, to, direction); //Appel la fonction de déplacement
 }
+
 /**
  *  La fonction regarde quel est la couleur du dernier joueur qui a jouer
  *  et permet ensuite de changer le joueur qui joue
@@ -76,6 +77,7 @@ void run() {
         viderBuffer();
     } while (1);
 }
+
 /**
  * Cette fonction permet de choisir quel joueur commence à jouer
  */

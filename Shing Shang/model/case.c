@@ -30,6 +30,7 @@ Case creerCase(int x, int y, int jouable, int pleine)
 void remplirCase(Case *cellule) {
     cellule->pleine = 1; //Rempli les cases en pleine pour differencier case vide/pleine
 }
+
 /**
  *  Fonction de déplacement
  *
@@ -43,6 +44,7 @@ void updateCase(Case *celluleDepart, Case *celluleArrivee) {
     
     *celluleDepart = creerCase(celluleDepart->coordonnees.y, celluleDepart->coordonnees.x, 1, 0);
 }
+
 //Différentes coordonnées pour chaque direction de déplacement
 Coordonnees haut(Coordonnees initial, Type typePion) {
     switch (typePion) {
@@ -139,6 +141,7 @@ Coordonnees hautdroit(Coordonnees initial, Type typePion) {
             break;
     }
 }
+
 //Nouvelle coordonnees de déplacement lors d'un saut d'un pion
 Coordonnees coordonneesDeplacement(Direction direction) {
     Coordonnees coordonnees;

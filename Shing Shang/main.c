@@ -10,7 +10,8 @@
 
 int main(void) {
     
-    int jouer=0;
+    int jouer = 0;
+    
     do {
         printf("===================================================\n");
         printf("'                Shing Shang                      '\n");
@@ -34,7 +35,6 @@ int main(void) {
         else if (jouer == 2) {
             return 0;
         }
-
-    }
-    while (jouer != 1 || jouer !=2 );
-    }
+        
+    } while (jouer != 1 || jouer !=2 );
+}

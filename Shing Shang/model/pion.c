@@ -22,6 +22,7 @@ Coordonnees creerCoordonnees(int x, int y) {
     
     return coordoonees;
 }
+
 /**
  *  Permet de créer les différents pions
  *
